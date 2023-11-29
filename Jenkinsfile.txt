@@ -1,0 +1,25 @@
+pipeline 
+{
+ 	agent any
+	stages 
+	{
+	   	stage('Test')
+		{
+			steps 
+			{
+				bat 'mvn test -Dtest=RunnerClass'
+			}
+		} 
+	}		
+
+	post
+	{
+		always
+		{
+			cucumber buildStatus: 'UNCHANGED', customCssFiles: '', customJsFiles: '', fileIncludePattern: '**/*.json', jsonReportDirectory: 'C:/Jenkins/workspace/04-OpenSourceFramework/CucumberReport/target/cucumber-report/', reportTitle: 'Report', sortingMethod: 'ALPHABETICAL', trendsLimit: 5
+		}
+	}	
+	
+}
+           
+    
