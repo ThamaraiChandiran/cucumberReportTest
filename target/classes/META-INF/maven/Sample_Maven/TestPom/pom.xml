@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>Sample_Maven</groupId>
 	<artifactId>TestPom</artifactId>
@@ -44,10 +46,10 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-    <groupId>org.apache.logging.log4j</groupId>
-    <artifactId>log4j-1.2-api</artifactId>
-    <version>2.2</version>
-      </dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.22.0</version>
+		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -62,6 +64,16 @@
 			<groupId>net.masterthought</groupId>
 			<artifactId>cucumber-reporting</artifactId>
 			<version>5.7.7</version>
+		</dependency>
+				<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.14</version>
+		</dependency>
+				<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.22.0</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -88,11 +100,16 @@
 						<configuration>
 							<projectName>TestPom</projectName>
 							<!-- output directory for the generated report -->
-							<outputDirectory>${project.build.directory}/cucumber-JVM-Report</outputDirectory>
-							<inputDirectory>${project.build.directory}C:\Users\VDI022\New folder (2)\TestPom\target\cucumber-report\cucumber.json</inputDirectory>
+							<outputDirectory>
+								${project.build.directory}/cucumber-JVM-Report</outputDirectory>
+							<inputDirectory>${project.build.directory}C:\Users\VDI022\New
+								folder
+								(2)\TestPom\target\cucumber-report\cucumber.json</inputDirectory>
 							<jsonFiles>
 								<!-- supports wildcard or name pattern -->
-								<param>C:\Users\VDI022\New folder (2)\TestPom\target\cucumber-report\cucumber.json</param>
+								<param>
+									C:\Users\VDI022\New folder
+									(2)\TestPom\target\cucumber-report\cucumber.json</param>
 							</jsonFiles>
 							<skippedFails>true</skippedFails>
 							<enableFlashCharts>true</enableFlashCharts>
