@@ -79,9 +79,6 @@
 					<execution>
 						<id>execution</id>
 						<phase>test</phase>
-						<goals>
-							<goal>generate</goal>
-						</goals>
 						<configuration>
 							<projectName>TestPom</projectName>
 							<!-- output directory for the generated report -->
