@@ -3,7 +3,14 @@ pipeline
  	agent any
 	stages 
 	{
-	   	stage('Test')
+		stage('Fetch From Github')
+		{
+			steps 
+			{
+				echo("Github")
+			}
+		} 	
+	   	stage('Execution')
 		{
 			steps 
 			{
