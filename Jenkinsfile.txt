@@ -23,6 +23,7 @@ pipeline
 	{
 		always
 		{
+			sleep(time:3,unit:"SECONDS")
 			cucumber buildStatus: 'UNCHANGED', customCssFiles: '', customJsFiles: '', fileIncludePattern: '**/*.json', jsonReportDirectory: 'C:/Jenkins/workspace/04-OpenSourceFramework/CucumberReport/target/cucumber-report/', reportTitle: 'Report', sortingMethod: 'ALPHABETICAL', trendsLimit: 5
 		}
 	}	
