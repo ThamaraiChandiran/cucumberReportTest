@@ -1,6 +1,6 @@
 pipeline 
 {
- 	agent { label 'Win-Node-1' }
+ 	agent  { label 'LinuxAgent' } //'Win-Node-1' 
 
 
 	stages 
