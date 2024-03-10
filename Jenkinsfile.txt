@@ -16,7 +16,7 @@ pipeline
 		{
 			steps 
 			{
-				sh 'mvn test -Dtest=RunnerClass'
+				bat 'mvn test -Dtest=RunnerClass'
 			}
 		} 
 	}		
