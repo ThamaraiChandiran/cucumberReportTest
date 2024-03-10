@@ -1,22 +1,22 @@
 pipeline 
 {
- 	agent  { label 'LinuxAgent' } //'Win-Node-1' 
+ 	agent  { label 'Win-Node-1'} //'LinuxAgent'  
 
 
 	stages 
 	{
-		stage('Fetch From Github')
+		stage('Clean and Pull')
 		{
 			steps 
 			{
-				echo("Github")
+				cleanWs()
 			}
 		} 	
 	   	stage('Execution')
 		{
 			steps 
 			{
-				bat 'mvn test -Dtest=RunnerClass'
+				sh 'mvn test -Dtest=RunnerClass'
 			}
 		} 
 	}		
@@ -26,7 +26,7 @@ pipeline
 		always
 		{
 			sleep(time:3,unit:"SECONDS")
-			cucumber buildStatus: 'UNCHANGED', customCssFiles: '', customJsFiles: '', fileIncludePattern: '**/*.json', jsonReportDirectory: 'C:/Jenkins/workspace/04-OpenSourceFramework/CucumberReport/target/cucumber-report/', reportTitle: 'Report', sortingMethod: 'ALPHABETICAL', trendsLimit: 5
+			cucumber buildStatus: 'UNCHANGED', customCssFiles: '', customJsFiles: '', fileIncludePattern: '**/*.json', jsonReportDirectory: 'target/cucumber-report/', reportTitle: 'Report', sortingMethod: 'ALPHABETICAL', trendsLimit: 5
 		}
 	}	
 	
