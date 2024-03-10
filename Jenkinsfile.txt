@@ -5,13 +5,7 @@ pipeline
 
 	stages 
 	{
-		stage('Clean and Pull')
-		{
-			steps 
-			{
-				cleanWs()
-			}
-		} 	
+	
 	   	stage('Execution')
 		{
 			steps 
